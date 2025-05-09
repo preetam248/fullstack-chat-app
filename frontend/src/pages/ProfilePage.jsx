@@ -41,7 +41,8 @@ function ProfilePage() {
             <p className="mt-2">Your profile information</p>
             <button
               className="absolute right-0 top-0"
-              onClick={() => navigate(-1)}>
+              onClick={() => navigate(-1)}
+            >
               <X />
             </button>
           </div>
@@ -51,7 +52,11 @@ function ProfilePage() {
           <div className="flex flex-col items-center gap-4">
             <div className="relative">
               <img
-                src={selectedImg || authUser.profilePic || "/avatar.png"}
+                src={
+                  selectedImg ||
+                  authUser.profilePic ||
+                  `https://avatar.iran.liara.run/username?username=${authUser.fullName}`
+                }
                 alt="Profile"
                 className="size-32 rounded-full object-cover border-4 "
               />

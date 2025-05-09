@@ -66,8 +66,10 @@ const ChatContainer = () => {
                 <img
                   src={
                     message.senderId === authUser._id
-                      ? authUser.profilePic || "/avatar.png"
-                      : selectedUser.profilePic || "/avatar.png"
+                      ? authUser.profilePic ||
+                        `https://avatar.iran.liara.run/username?username=${authUser.fullName}`
+                      : selectedUser.profilePic ||
+                        `https://avatar.iran.liara.run/username?username=${selectedUser.fullName}`
                   }
                   alt="profile pic"
                 />

@@ -14,7 +14,10 @@ const ChatHeader = () => {
           <div className="avatar">
             <div className="size-10 rounded-full relative">
               <img
-                src={selectedUser.profilePic || "/avatar.png"}
+                src={
+                  selectedUser.profilePic ||
+                  `https://avatar.iran.liara.run/username?username=${selectedUser.fullName}`
+                }
                 alt={selectedUser.fullName}
               />
             </div>
